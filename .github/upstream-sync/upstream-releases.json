@@ -2,6 +2,26 @@
   "upstream_repository": "AppHouseKitchen/AlDente-Battery_Care_and_Monitoring",
   "releases": [
     {
+      "tag_name": "1.40",
+      "name": "AlDente 1.40",
+      "body": "## AlDente 1.40 Penne\r\n\r\n### Pro\r\n\r\n- New: Manual Sleep Control. Keep your Mac awake on demand from the Popover widgets, for a set time or indefinitely. Your AI agents can keep working while you're away, even on the go. AlDente turns sleep back on once the battery drops to a level you choose, so your Mac never drains to empty.\r\n- Simpler, faster Calibration Mode. The hold phase is gone. Instead, the charge phases now continue only until the battery is full.\r\n- New \"After macOS Calibration\" setting. macOS sometimes charges the battery to 100% to calibrate it, and AlDente can't interrupt this. You can now choose what happens afterward: discharge back to your charge limit, or continue with a full AlDente calibration.\r\n- Weekly schedules on specific days. Recurring weekly tasks can now run only on the days you pick.\r\n- Scheduled tasks now show when they will run next.\r\n- New advanced setting in Sleep Behavior: \"Mute when Display is off and Sleep is Disabled.\" It prevents unexpected sounds while your Mac stays awake with the display off.\r\n- New \"Restore Window Layout on Relaunch\" setting: the Dashboard reopens at its last size and position.\r\n- New macOS 27 battery icon style.\r\n- The \"What's New\" window now has a \"Never Show Again\" option.\r\n- New: AlDente now shows the firmware version of your MagSafe 3 cable while it's plugged in (Popover → Charger, and Dashboard).\r\n- New: “Last Full Charge” shows when macOS last recorded a full charge of your battery (Popover → Battery Health, and Dashboard).\r\n- Fixed: After a macOS battery calibration, AlDente now continues right away with your chosen \"After macOS Calibration\" option. \"Discharge to Charge Limit\" works correctly again.\r\n\r\n### All\r\n\r\n- Debug files are now zipped, so they attach reliably in Apple Mail. You can also open the saved file with the new \"Show in Finder\" button.\r\n- General UI/UX improvements and bug fixes.\r\n- AlDente's helper tool has been updated. You may be asked for your administrator password once after updating.\r\n\r\n\r\nWith peace & love from Vienna,  \r\nAppHouseKitchen",
+      "draft": false,
+      "prerelease": false,
+      "created_at": "2026-10-08T08:34:54Z",
+      "updated_at": "2026-10-24T09:29:33Z",
+      "published_at": "2026-10-24T09:29:33Z",
+      "assets": [
+        {
+          "id": 671838181,
+          "name": "AlDente.dmg",
+          "size": 12729579,
+          "content_type": "application/x-diskcopy",
+          "updated_at": "2026-10-24T09:29:27Z",
+          "digest": "sha256:259d7074160f8e3d1b62bb9dc3909dc34cf01af1866ec136e55eb713afa7abb0"
+        }
+      ]
+    },
+    {
       "tag_name": "1.39.4",
       "name": "AlDente 1.39.4",
       "body": "## AlDente 1.39.4 Coralli\r\n\r\n### Free\r\n\r\n- Fixed visual glitches in the Popover that occurred in the first betas of macOS 27.2.\r\n\r\n### Pro\r\n\r\n- Fixed unintended behavior in Calibration Mode when it was triggered by macOS.\r\n- Fixed the “Stop Charging When App Closed” setting for users running macOS 26 or macOS 15.\r\n- Fixed an issue that caused Sailing Mode to not work properly on macOS 26 and macOS 15.\r\n\r\n## AlDente 1.39.3\r\n\r\n### Pro\r\n\r\n- Fixed some issues with Calibration Mode on devices with macOS 26 and macOS 15.\r\n\r\n## AlDente 1.39.2\r\n\r\n### All\r\n\r\n- Fixed an issue that caused the charge limit to not work properly on some Intel MacBooks running certain macOS versions.\r\n- Charge limits below 80% are now available again on Intel MacBooks without requiring an additional toggle.\r\n- Several smaller improvements.\r\n\r\n## AlDente 1.39.1\r\n\r\n### All\r\n\r\n- Fixed a bug that caused the charge limit to not work properly on some MacBooks with macOS 15 and below.\r\n\r\n## AlDente 1.39\r\n\r\n### All\r\n\r\n- Completely rebuilt charge control with macOS 27 support and improved reliability on earlier macOS versions and Intel MacBooks, including after downgrading from the macOS 27 beta.\r\n- Charge limits below 80% now require enabling a toggle in Charge Settings for the best experience with Apple’s new charge control systems.\r\n- Reduced AlDente’s impact on WindowServer CPU usage.\r\n- General stability improvements and bug fixes.\r\n\r\n### Pro\r\n\r\n- Calibration Mode now automatically detects and integrates Apple’s battery calibration. After the initial charging phase, you can cancel or let AlDente complete the calibration for an even better result.\r\n- Redesigned the Apps Using Significant Energy widget with Quit buttons, optional background processes, and improved app detection.\r\n- Hardware battery percentage is now available in the stats widget and menu bar items catalog. Removed the previous toggle; charge control now always uses the macOS percentage.\r\n- Fixed scheduled task start times resetting when changing the repeat interval.\r\n\r\nWith peace & love from Vienna,  \r\nAppHouseKitchen",
@@ -378,26 +398,6 @@
           "content_type": "application/x-diskcopy",
           "updated_at": "2025-06-28T05:35:14Z",
           "digest": "sha256:f7a18475d6217fd101b45eb1d7d64502b301ad4b957087b6b0d018a833fae02c"
-        }
-      ]
-    },
-    {
-      "tag_name": "1.33.2",
-      "name": "[BETA] AlDente 1.33.2",
-      "body": "## [BETA] AlDente 1.33.2 Lumache\r\n\r\n### All\r\n- Public beta with initial support for macOS Tahoe 26 Developer Beta. Apple made things tricky, but we found a new solution.\r\n- Use with caution, this is an emergency public beta release to support the macOS Tahoe 26 Developer Beta for users who have already updated. Bugs might still be possible.\r\n- This is not a guarantee that AlDente will work flawlessly on the next macOS beta release.\r\n- We strongly advise against updating to any beta versions of macOS and waiting for the final release instead.\r\n\r\n\r\n## AlDente 1.33.1 Lumache\r\n\r\n### All\r\n- Fixed a bug that caused a crash after activating the license on macOS 12 and lower.\r\n- Updated many underlying frameworks and libraries.\r\n\r\n## AlDente 1.33\r\n\r\n### Pro\r\n- Overhauled Sleep settings for more clarity and macOS native behavior.\r\n- A new setting \"Turn display off when inactive\" was added to mirror the macOS setting \"Turn display off when inactive\", while AlDente disables sleep.\r\n- New Menubar Right Click option to open the Dashboard.\r\n- There is a new license management setting with a new option to change the email address within the app.\r\n- Improved usability with in-app help tooltips for better feature explanations.\r\n- Fixed a bug that caused overcharging when the MacBook went to sleep unplugged and was plugged in during sleep.\r\n- Fixed a bug that caused the app to crash when Calibration Mode was closed.\r\n- Fixed a bug that sometimes caused multiple calibration widgets to appear.\r\n\r\n### All\r\n- A new setting, \"Share Technical Data\", was added in settings/general. This is opt-in only and will enable future insights, new features, and AlDente improvements. You can find more information about this setting on [our new website](https://apphousekitchen.com/new-analytics-setting-in-aldente/)!\r\n- A new uninstall wizard helps you to get rid of all the tiny saucy bits AlDente might leave behind.\r\n- Installation Process improvements.\r\n- Several small improvements and fixes.\r\n\r\nWith peace & love from Vienna,  \r\nAppHouseKitchen\r\n",
-      "draft": false,
-      "prerelease": false,
-      "created_at": "2024-09-20T12:21:54Z",
-      "updated_at": "2025-06-17T12:59:32Z",
-      "published_at": "2025-06-17T12:59:32Z",
-      "assets": [
-        {
-          "id": 264730601,
-          "name": "AlDente.dmg",
-          "size": 14637973,
-          "content_type": "application/x-diskcopy",
-          "updated_at": "2025-06-17T11:40:03Z",
-          "digest": "sha256:f17b5a8649efe698a122b546f255c5644e486a08eedff77478ab7d1fc611e75c"
         }
       ]
     }
